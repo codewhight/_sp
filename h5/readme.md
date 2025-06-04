@@ -1,11 +1,13 @@
 產生組合語言
+```
 gcc -S power.c -o power.s
-
+```
 將組合語言轉換成目的碼
+```
 gcc -c power.c 
-
+```
 反組譯目的碼
-
+```
 objdump -d power.o
 
 power.o:     file format elf64-x86-64
@@ -56,3 +58,4 @@ Disassembly of section .text:
   80:   b8 00 00 00 00          mov    $0x0,%eax
   85:   c9                      leave
   86:   c3                      ret
+```
