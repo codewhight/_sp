@@ -59,3 +59,28 @@ Disassembly of section .text:
   85:   c9                      leave
   86:   c3                      ret
 ```
+印出該目的檔的表頭
+```
+objdump -h power.o
+
+power.o:     file format elf64-x86-64
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000087  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  000000c7  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  000000c7  2**0
+                  ALLOC
+  3 .rodata       0000000c  0000000000000000  0000000000000000  000000c7  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      0000002c  0000000000000000  0000000000000000  000000d3  2**0
+                  CONTENTS, READONLY
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000ff  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.property 00000020  0000000000000000  0000000000000000  00000100  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .eh_frame     00000058  0000000000000000  0000000000000000  00000120  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+```
