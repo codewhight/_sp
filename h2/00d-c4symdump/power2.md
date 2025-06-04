@@ -1,3 +1,4 @@
+```
 1: #include <stdio.h>
 2: int power2(int n) {
 3:    int r, i;
@@ -174,3 +175,4 @@ power2(3)=8
 109> PSH
 110> EXIT
 exit(12) cycle = 110
+```
